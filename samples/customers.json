@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "id": 123,
+      "first":  "Scott",
+      "middle": "G",
+      "last":   "Smith",
+      "addressLine": "2201 S. 2nd Street",
+      "city":        "Little Rock",
+      "state":       "AR",
+      "postalCode":  "72206"
+    },
+    {
+      "id": 124,
+      "first":  "Amber",
+      "middle": "C",
+      "last":   "Smith",
+      "addressLine": "2201 S. 2nd Street",
+      "city":        "Little Rock",
+      "state":       "AR",
+      "postalCode":  "72206"
+    },
+    {
+      "id": 125,
+      "first":  "Travis",
+      "middle": "H",
+      "last":   "Mother",
+      "addressLine": "6 S. Ninth Street",
+      "city":        "Little Rock",
+      "state":       "AR",
+      "postalCode":  "72206"
+    }
+  ]
+}

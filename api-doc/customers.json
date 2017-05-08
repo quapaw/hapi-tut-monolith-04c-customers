@@ -1,0 +1,73 @@
+{
+  "basePath": "/api/v1",
+  "produces": [
+    "application/json"
+  ],
+  "swagger": "2.0",
+  "host": "localhost",
+  "info": {
+    "title": "Hapi Monolith Tutorial 02a",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/customers": {
+      "get": {
+        "description": "Pulls all customers",
+        "operationId": "getCustomers",
+        "summary":     "Get all customers",
+        "tags": [      "Customers"    ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "properties": {
+                "customers": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Customer"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No customers found"
+          },
+          "400": {
+            "description": "Unknown Error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "externalDocs": {
+        "description": "Company API Error Handling document",
+        "url": "https://localhost/document/ErrorHandling.html"
+      },
+      "properties": {
+        "code":      {"type": "string"},
+        "message":   {"type": "string"},
+        "requestId": {"type": "string", "format": "guid"}
+      }
+    },
+    "Customer": {
+      "type": "object",
+      "properties": {
+        "id":             {"type": "string", "format": "guid"},
+        "first":          {"type": "string"},
+        "middle":         {"type": "string"},
+        "last":           {"type": "string"},
+        "addressLine":    {"type": "string"},
+        "city":           {"type": "string"},
+        "state":          {"type": "string"},
+        "postalCode":     {"type": "string"},
+      }
+    }
+  }
+}
